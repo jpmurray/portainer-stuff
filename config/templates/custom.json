@@ -3,30 +3,16 @@
     "templates": [
         {
             "type": 1,
-            "title": "Custom",
-            "name": "Custom",
-            "note": "Note",
-            "description": "Description",
+            "title": "Gitea",
+            "description": "A painless self-hosted Git service.",
+            "categories": ["SCM"],
             "platform": "linux",
-            "logo": "",
-            "image": "custom:latest",
-            "env": [
-                {
-                    "name": "Custom",
-                    "label": "Custom",
-                    "default": "Custom",
-                    "description": "Custom"
-                }
-            ],
+            "logo": "https://secure.gravatar.com/avatar/5603d5a79452bc237ac44f663d39f9aa.jpg?s=120",
+            "image": "gitea/gitea:latest",
             "ports": [
-                "9876:9876/tcp"
+            "3000/tcp", "22/tcp"
             ],
-            "volumes": [
-                {
-                    "container": "/config",
-                    "bind": "/volume1/docker/custom/config"
-                }
-            ],
+            "volumes": [{"container": "/data"}],
             "restart_policy": "unless-stopped"
         }
     ]
