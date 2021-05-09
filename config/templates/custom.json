@@ -1,0 +1,33 @@
+{
+    "version": "2",
+    "templates": [
+        {
+            "type": 1,
+            "title": "Custom",
+            "name": "Custom",
+            "note": "Note",
+            "description": "Description",
+            "platform": "linux",
+            "logo": "",
+            "image": "custom:latest",
+            "env": [
+                {
+                    "name": "Custom",
+                    "label": "Custom",
+                    "default": "Custom",
+                    "description": "Custom"
+                }
+            ],
+            "ports": [
+                "9876:9876/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/config",
+                    "bind": "/volume1/docker/custom/config"
+                }
+            ],
+            "restart_policy": "unless-stopped"
+        }
+    ]
+}
